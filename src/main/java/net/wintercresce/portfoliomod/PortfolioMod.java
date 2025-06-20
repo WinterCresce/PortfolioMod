@@ -2,6 +2,7 @@ package net.wintercresce.portfoliomod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.wintercresce.portfoliomod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 // very important comment
@@ -11,6 +12,6 @@ public class PortfolioMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItems.registerModItems();
 	}
 }
