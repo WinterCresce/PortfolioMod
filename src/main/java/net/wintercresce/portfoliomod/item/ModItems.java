@@ -12,7 +12,7 @@ import net.wintercresce.portfoliomod.PortfolioMod;
 
 public class ModItems {
 
-    public static final Item BLOOD_DIAMOND = registerItem( "blood_diamond", new Item(new Item.Settings())) ;
+    public static final Item BLOOD_DIAMOND = registerItem( "blood_diamond", new Item(register(new Item.Settings(), "blood_diamond"))) ;
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of("portfoliomod", name), item);
