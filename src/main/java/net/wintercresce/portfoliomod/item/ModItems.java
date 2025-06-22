@@ -13,8 +13,10 @@ import net.wintercresce.portfoliomod.PortfolioMod;
 public class ModItems {
 
     public static final String BLOOD_DIAMOND_ID = "blood_diamond";
+    public static final String RAW_BLOOD_DIAMOND_ID = "raw_blood_diamond";
 
     public static final Item BLOOD_DIAMOND = registerItem(BLOOD_DIAMOND_ID, new Item(new Item.Settings().registryKey(RegistryKey.of(Registries.ITEM.getKey(), Identifier.of(PortfolioMod.MOD_ID, BLOOD_DIAMOND_ID)))));
+    public static final Item RAW_BLOOD_DIAMOND = registerItem(RAW_BLOOD_DIAMOND_ID, new Item(new Item.Settings().registryKey(RegistryKey.of(Registries.ITEM.getKey(), Identifier.of(PortfolioMod.MOD_ID, RAW_BLOOD_DIAMOND_ID)))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of("portfoliomod", name), item);
@@ -34,6 +36,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(BLOOD_DIAMOND);
+            entries.add(RAW_BLOOD_DIAMOND);
         });
     }
 }
